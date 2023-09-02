@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<Settings>
+    <Environment>
+        <CredPath>C:\AR_UserUpdate\Creds</CredPath>
+        <LocalDataFolder>C:\AR_UserUpdate\Data</LocalDataFolder>
+        <Includes>
+            <WinSCP>C:\AR_UserUpdate\WinSCP\WinSCPnet.dll</WinSCP>
+        </Includes>
+    </Environment>
+    <Paycom_SFTP>
+        <Hostname>sftp.paycomonline.net</Hostname>
+        <Username>000_0c440_sftp2</Username>
+        <SSHKey>ssh-rsa 2048 sVM7Q5EKsEDa24sBfjDs3goev7jfXLtKD47t9McgjIs</SSHKey>
+        <ExportFolder>/Home/000_0c440_sftp2/outbound/</ExportFolder>
+    </Paycom_SFTP>
+    <Email>
+        <SMTP_Server>alliedreliability-com.mail.protection.outlook.com</SMTP_Server>
+        <From_Address>it.notifications@alliedreliability.com</From_Address>
+        <To_Address>
+            <Error>bmacek@alliedreliability.com</Error>
+            <NameUpdate>bmacek@alliedreliability.com</NameUpdate>
+            <Report>bmacek@alliedreliability.com</Report>
+        </To_Address>
+    </Email>
+    <SQL>
+        <Server>HDCSQL04.tfh.com</Server>
+        <Database>ITData</Database>
+        <Username>svc.user_update</Username>
+        <Tables>
+            <ADUsers>all_ad_users</ADUsers>
+            <PaycomData>view_paycom_test_data</PaycomData>
+        </Tables>
+        <ImportFilePath>\Paycom\Import.xlsx</ImportFilePath>
+        <ImportJob>
+            <JobName>Allied - Daily Paycom Import</JobName>
+        </ImportJob>
+    </SQL>
+    <ActiveDirectory>
+        <SearchBase>OU=Test Accounts,OU=IT,OU=Departments,OU=Finance,OU=Org,DC=ar,DC=local</SearchBase>
+    </ActiveDirectory>
+</Settings>
